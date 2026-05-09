@@ -1,0 +1,33 @@
+[package]
+name = "shader-tools"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.5.20", features = ["derive"] }
+eyre = "0.6.12"
+color-eyre = "0.6"
+toml = "0.8.19"
+fancy-regex = "0.16.2"
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.2", features = ["local-time"] }
+tracing-indicatif = "0.3.13"
+indicatif = "0.18"
+serde = { version = "1.0.215", features = ["derive"] }
+serde_json = "1.0"
+camino = "1.1"
+walkdir = "2.4.0"
+itertools = "0.12.0"
+directories-next = "2.0"
+dirs-next = "2.0"
+ureq = "2.12"
+colored = "2"
+xxhash-rust = { version = "0.8.15", features = ["xxh64"] }
+rayon = "1.10"
+
+# League toolkit deps pinned to a single commit so they share one resolved
+# version. Bump all four together when ltk_shader changes.
+ltk_shader = { git = "https://github.com/LeagueToolkit/league-toolkit", rev = "dfe3741b6d1c5117e6a4b9d5d0e7c2e09c084ffa" }
+ltk_wad = { git = "https://github.com/LeagueToolkit/league-toolkit", rev = "dfe3741b6d1c5117e6a4b9d5d0e7c2e09c084ffa", features = ["serde"] }
+ltk_meta = { git = "https://github.com/LeagueToolkit/league-toolkit", rev = "dfe3741b6d1c5117e6a4b9d5d0e7c2e09c084ffa", features = ["serde"] }
+ltk_hash = { git = "https://github.com/LeagueToolkit/league-toolkit", rev = "dfe3741b6d1c5117e6a4b9d5d0e7c2e09c084ffa" }
